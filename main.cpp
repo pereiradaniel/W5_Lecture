@@ -22,17 +22,17 @@ unsigned int fib(unsigned int n)
 
 unsigned int fibR(unsigned int n)
 {
-	if (n <= 1)
+	if (n <= 2)
 		return 1;
 	return fibR(n - 1) + fibR(n - 2);
 }
 
 int main()
 {
-	for (auto i = 1; i < 50; ++i)
+	for (auto i = 1; i < 10; ++i)
 	{
 		try {
-			cout << i << ". " << fib(i) << endl;
+			cout << i << ". " << fibR(i) << endl;
 		}
 		catch (const char* error) // Catch the string thrown by fib
 		{
