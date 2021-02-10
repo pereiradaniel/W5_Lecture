@@ -27,6 +27,11 @@ int main()
 		try {
 			cout << i << ". " << fib(i) << endl;
 		}
+		// Order is important!
+		catch (...)
+		{
+			cout << "Catastrophic error!" << endl;
+		}
 		catch (const char* error) // Catch the string thrown by fib
 		{
 			cout << error << endl;
