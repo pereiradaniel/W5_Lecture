@@ -7,7 +7,7 @@ unsigned int fib(unsigned int n)
 	if (n == 0)
 		throw "Index 0 is not a valid index.";
 	if (n > 47)
-		throw "Index too big.";
+		throw 10.3;
 
 	unsigned int val1 = 0, val2 = 1;
 	for (auto i = 0u; i < n; ++i)
@@ -30,6 +30,10 @@ int main()
 		catch (const char* error) // Catch the string thrown by fib
 		{
 			cout << error << endl;
+		}
+		catch (double error)
+		{
+			cout << "The index was too big." << endl;
 		}
 	}
 }
