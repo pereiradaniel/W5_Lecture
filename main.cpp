@@ -6,7 +6,9 @@ unsigned int fib(unsigned int n)
 {
 	if (n == 0)
 		throw "Index 0 is not a valid index.";
-	
+	if (n > 47)
+		throw "Index too big.";
+
 	unsigned int val1 = 0, val2 = 1;
 	for (auto i = 0u; i < n; ++i)
 	{
