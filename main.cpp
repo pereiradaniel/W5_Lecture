@@ -3,6 +3,7 @@
 using namespace std;
 
 // Fibonacci iterative
+// This version is SLOW!
 unsigned int fib(unsigned int n)
 {
 	if (n == 0)
@@ -22,6 +23,7 @@ unsigned int fib(unsigned int n)
 }
 
 // Fibonacci recursive
+// This version is FAST!
 unsigned int fibR(unsigned int n)
 {
 	if (n <= 2)
