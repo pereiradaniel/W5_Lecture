@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Fibonacci iterative
 unsigned int fib(unsigned int n)
 {
 	if (n == 0)
@@ -20,6 +21,7 @@ unsigned int fib(unsigned int n)
 	return val1;
 }
 
+// Fibonacci recursive
 unsigned int fibR(unsigned int n)
 {
 	if (n <= 2)
