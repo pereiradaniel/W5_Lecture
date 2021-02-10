@@ -27,11 +27,6 @@ int main()
 		try {
 			cout << i << ". " << fib(i) << endl;
 		}
-		// Order is important!
-		catch (...)
-		{
-			cout << "Catastrophic error!" << endl;
-		}
 		catch (const char* error) // Catch the string thrown by fib
 		{
 			cout << error << endl;
@@ -39,6 +34,13 @@ int main()
 		catch (double error)
 		{
 			cout << "The index was too big." << endl;
+		}
+		// Order is important!
+		// This must come at the end to catch all exceptions that
+		// have not already been caught.
+		catch (...)
+		{
+			cout << "Catastrophic error!" << endl;
 		}
 	}
 }
