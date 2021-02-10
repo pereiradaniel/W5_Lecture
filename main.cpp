@@ -20,6 +20,13 @@ unsigned int fib(unsigned int n)
 	return val1;
 }
 
+unsigned int fibR(unsigned int n)
+{
+	if (n <= 1)
+		return 1;
+	return fibR(n - 1) + fibR(n - 2);
+}
+
 int main()
 {
 	for (auto i = 1; i < 50; ++i)
